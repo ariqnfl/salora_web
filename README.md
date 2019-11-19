@@ -1,4 +1,4 @@
-#Tutorial Install
+# Tutorial Install
 
 - edit .env nya dulu
 - php artisan migrate
