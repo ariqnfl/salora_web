@@ -11,14 +11,13 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/panel', function () {
-    return view('layouts.global');
-})->name('panel');
-
+Route::get('/panel', 'PanelController@index')->name('panel');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

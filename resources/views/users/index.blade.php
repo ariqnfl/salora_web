@@ -10,6 +10,7 @@
             <th><b>Name</b></th>
             <th><b>Email</b></th>
             <th><b>Role</b></th>
+            <th><b>Action</b></th>
         </tr>
         </thead>
         <tbody>
@@ -18,6 +19,17 @@
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
                 <td>{{$user->role}}</td>
+                <td>
+                    <a
+                        {{--                                {{route('lapangans.edit', [$lapangans->id])}}--}}
+                        href=""
+                        class="btn btn-info btn-sm"
+                    > Edit </a>
+                    <input
+                        type="submit"
+                        value="Delete"
+                        class="btn btn-danger btn-sm">
+
             </tr>
         @endforeach
         </tbody>

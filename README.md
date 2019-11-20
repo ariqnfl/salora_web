@@ -2,9 +2,10 @@
 
 - edit .env nya dulu
 - php artisan migrate
-- php aritisan db:seed
+- php artisan db:seed
 - email admin@gmail.com pass password
 - php artisan storage:link
+- ya kalo udah di serve dong hhhh
 
 
 

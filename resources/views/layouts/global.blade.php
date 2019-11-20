@@ -39,7 +39,7 @@
 <body>
 
 <nav class="navbar navbar-expand p-0">
-    <a class="navbar-brand text-center col-xs-12 col-md-3 col-lg-2 mr-0" href="index.html"> Salora </a>
+    <a class="navbar-brand text-center col-xs-12 col-md-3 col-lg-2 mr-0" href="/panel"> Salora </a>
     <button class="btn btn-link d-block d-md-none" data-toggle="collapse" data-target="#sidebar-nav" role="button">
         <span class="oi oi-menu"></span>
     </button>
@@ -72,8 +72,11 @@
             <ul class="polished-sidebar-menu ml-0 pt-4 p-0 d-md-block">
                 <input class="border-dark form-control d-block d-md-none mb-4" type="text" placeholder="Search"
                        aria-label="Search"/>
+                <li><a href="{{route('panel')}}"><span class="oi oi-home"></span> Home</a></li>
+                @if(Auth::user()->role == "admin")
                 <li><a href="{{route('users.index')}}"><span class="oi oi-people"></span> User</a></li>
-                <li><a href="{{route('users.index')}}"><span class="oi oi-document"></span> Lapangan</a></li>
+                @endif
+                <li><a href="{{route('lapangans.index')}}"><span class="oi oi-document"></span> Lapangan</a></li>
                 <li><a href="{{route('users.index')}}"><span class="oi oi-cart"></span> Order</a></li>
 
                 <div class="d-block d-md-none">
