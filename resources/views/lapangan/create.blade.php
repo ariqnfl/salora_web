@@ -17,11 +17,10 @@
                   class="shadow-sm p-3 bg-white">
 
                 @csrf
-
-                <label for="nama_lapangan">Nama Lapangan</label> <br>
-                <input type="text" class="form-control" name="nama_lapangan" placeholder="Nama Lapangan">
-                <br>
-
+                <div class="form-group">
+                    <label for="nama_lapangan">Nama Lapangan</label>
+                    <input type="text" class="form-control" name="nama_lapangan" placeholder="Nama Lapangan">
+                </div>
                 <div class="form-group">
                     <label for="">Kategori Lapangan</label>
                     <select name="kategori_id" id="kategoris" class="form-control">
@@ -42,13 +41,27 @@
                     </select>
                 </div>
 
-                <label for="gambar">Gambar</label>
-                <input type="file" class="form-control" name="gambar">
-                <br>
+                <div class="form-group">
+                    <label for="gambar">Gambar</label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile02" name="gambar">
+                        <label class="custom-file-label" for="inputGroupFile02"
+                               aria-describedby="inputGroupFileAddon02">Choose file</label>
+                    </div>
+                </div>
 
-                <label for="harga">Harga</label> <br>
-                <input type="number" class="form-control" name="harga" id="harga" placeholder="Harga Lapangan per Jam">
-                <br>
+                <div class="form-group">
+                    <label for="harga">Harga Lapangan</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Rp.</span>
+                        </div>
+                        <input type="number" name="harga" class="form-control" placeholder="Harga Lapangan per Jam">
+                        <div class="input-group-append">
+                            <span class="input-group-text">.00</span>
+                        </div>
+                    </div>
+                </div>
 
 
                 <input
@@ -61,6 +74,12 @@
 @endsection
 @section('footer-script')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script>
+        $('#inputGroupFile02').on('change', function (e) {
+            var fileName = e.target.files[0].name;
+            $(this).next('.custom-file-label').html(fileName);
+        })
+    </script>
     <script>
         $('#waktus').select2({
             ajax: {

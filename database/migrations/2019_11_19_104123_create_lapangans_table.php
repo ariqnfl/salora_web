@@ -16,7 +16,7 @@ class CreateLapangansTable extends Migration
         Schema::create('lapangans', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama_lapangan');
-            $table->string('gambar');
+            $table->string('gambar')->nullable();
             $table->string('slug');
             $table->float('harga');
             $table->unsignedBigInteger('kategori_id');

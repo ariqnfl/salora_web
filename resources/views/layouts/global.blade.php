@@ -74,7 +74,7 @@
                        aria-label="Search"/>
                 <li><a href="{{route('panel')}}"><span class="oi oi-home"></span> Home</a></li>
                 @if(Auth::user()->role == "admin")
-                <li><a href="{{route('users.index')}}"><span class="oi oi-people"></span> User</a></li>
+                    <li><a href="{{route('users.index')}}"><span class="oi oi-people"></span> User</a></li>
                 @endif
                 <li><a href="{{route('lapangans.index')}}"><span class="oi oi-document"></span> Lapangan</a></li>
                 <li><a href="{{route('users.index')}}"><span class="oi oi-cart"></span> Order</a></li>
@@ -109,14 +109,16 @@
 </div>
 
 <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
-        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
-        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/esm/popper-utils.min.js"
+        integrity="sha256-1N0+7OfEs9pNPY5A9KGrCBvZMLgXF+t2m3AcNjn1pow=" crossorigin="anonymous">
+
+</script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
 @yield('footer-script')

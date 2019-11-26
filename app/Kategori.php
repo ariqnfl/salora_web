@@ -8,6 +8,6 @@ class Kategori extends Model
 {
     public function lapangans()
     {
-        return $this->hasOne('App\Lapangan');
+        return $this->hasOne('App\Lapangan','kategori_id','id');
     }
 }

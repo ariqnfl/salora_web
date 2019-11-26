@@ -49,15 +49,15 @@
                         </td>
                         <td>Rp.{{$lapangan->harga}}</td>
                         <td>
-                            <a
-{{--                                {{route('lapangans.edit', [$lapangans->id])}}--}}
-                                href=""
-                                class="btn btn-info btn-sm"
-                            > Edit </a>
-                            <input
-                                type="submit"
-                                value="Delete"
-                                class="btn btn-danger btn-sm">
+                            <form action="{{ route('lapangans.destroy',$lapangan->id) }}" method="POST">
+                                <a
+                                    href="{{route('lapangans.edit', [$lapangan->id])}}"
+                                    class="btn btn-info btn-sm"> Edit </a>
+                                @csrf
+                                @method('DELETE')
+
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach

@@ -13,12 +13,12 @@ class Lapangan extends Model
 
     public function kategori()
     {
-        return $this->belongsTo('App\Kategori');
+        return $this->belongsTo('App\Kategori','kategori_id','id');
     }
 
     public function jenis()
     {
-        return $this->belongsTo('App\Jenis');
+        return $this->belongsTo('App\Jenis','jenis_id','id');
     }
 
     protected $fillable = [

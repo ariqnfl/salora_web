@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="701c150c-7824-47ba-ba92-ccb71dccbe6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PanelController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LapanganController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LapanganController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lapangan/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lapangan/edit.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,6 +168,8 @@
       <updated>1574151798666</updated>
       <workItem from="1574151801494" duration="4188000" />
       <workItem from="1574157580577" duration="24691000" />
+      <workItem from="1574758432660" duration="17536000" />
+      <workItem from="1574846423279" duration="2333000" />
     </task>
     <task id="LOCAL-00001" summary="nambahin readme">
       <created>1574175153362</created>
@@ -189,7 +192,21 @@
       <option name="project" value="LOCAL" />
       <updated>1574227687151</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="apakah tampilan bisa generate sendiri ? 0w0">
+      <created>1574758491164</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1574758491164</updated>
+    </task>
+    <task id="LOCAL-00005" summary="apakah kau melihat matahari senja?">
+      <created>1574801582409</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1574801582409</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,7 +217,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -210,6 +229,7 @@
     <MESSAGE value="nambahin readme" />
     <MESSAGE value="nambahin readme salah dikit wkowkow" />
     <MESSAGE value="apakah tampilan bisa generate sendiri ? 0w0" />
-    <option name="LAST_COMMIT_MESSAGE" value="apakah tampilan bisa generate sendiri ? 0w0" />
+    <MESSAGE value="apakah kau melihat matahari senja?" />
+    <option name="LAST_COMMIT_MESSAGE" value="apakah kau melihat matahari senja?" />
   </component>
 </project>
