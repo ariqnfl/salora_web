@@ -15,6 +15,10 @@
     <script src="{{asset('js/sweetalert/dist/sweetalert.min.js')}}"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     <script>
         $(document).ready(function () {
             @yield('tambah-script')
@@ -50,10 +54,10 @@
                         <a class="nav-link text-success" href=""><strong>LAPANGAN</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-success" href=""><strong>BERITA</strong></a>
+                        <a class="nav-link text-success" href="/news"><strong>BERITA</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-success" href=""><strong>ABOUT US</strong></a>
+                        <a class="nav-link text-success" href="/about"><strong>ABOUT US</strong></a>
                     </li>
                 </ul>
             </nav>
@@ -92,7 +96,7 @@
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                data-toggle="dropdown"
-                               aria-haspopup="true" aria-expanded="false" v-pre>
+                               aria-haspopup="true" aria-expanded="false" v-pre style="color: #008f45">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
@@ -123,12 +127,9 @@
     <div class="modal-dialog">
         <div class="modal-content rounded-1">
             <div class="card" id="login-form">
-                <div class="card-header header-login">
-                    <h3 class="mb-0 text-center">LOGIN</h3>
-                </div>
                 <div class="card-body">
                     <div class="login-logo">
-                        <img class="mx-auto d-block" src="{{asset('image/Salora.png')}}" width="100px">
+                        <img class="mx-auto d-block" src="{{asset('image/Salora.png')}}" width="250px">
                     </div>
                     <div class="login-form">
                         <form action="{{route('login')}}"

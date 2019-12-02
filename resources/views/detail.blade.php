@@ -6,10 +6,8 @@
         <div id="item">
             <div class="row">
                 <div class="col-6 image-item">
-                    <img src="{{asset('storage/'.$lapangan->gambar)}}" alt="" class="img-thumbnail w-100">
-                </div>
-                <div class="col-6">
                     <h1>{{$lapangan->nama_lapangan}} </h1>
+                    <img src="{{asset('storage/'.$lapangan->gambar)}}" alt="" class="img-thumbnail w-100">
                     <br>
                     <label for="">Jenis Lapangan</label>
                     <h5>{{$lapangan->jenis->jenis}}</h5>
@@ -17,28 +15,39 @@
                     <label for="">Kategori Lapangan</label>
                     <h5>{{$lapangan->kategori->kategori}}</h5>
                     <br>
-                    <label for="">Harga Lapangan</label>
+                </div>
+                <div class="col-6">
+                    <br>
+                    <label for="">Harga Lapangan / Jam</label>
                     <h5><strong>Rp. {{number_format($lapangan->harga)}}</strong></h5>
                     <br>
-                    <div class="form-group">
-                        <label for="">Waktu Lapangan</label>
-                        <select name="waktu" id="waktu" class="form-control">
-                            @foreach($lapangan->waktus as $waktu)
-                                <option>{{$waktu->waktu}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <br>
-                    @if(Auth::check())
-                        <a class=" btn btn-success" href="">Beli Sekarang</a>
-                        <a class="btn btn-danger"
-                           href=""><span><i class="fas fa-heart">
+                    <form action="{{route('order.store')}}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <div class="form-group">
+                            <label for="">Waktu Sewa Lapangan</label>
+                            <select name="waktu_pesan" id="waktu" class="form-control">
+                                @foreach($lapangan->waktus as $waktu)
+                                    <option>{{$waktu->waktu}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <br>
+                        <input type="hidden" value="{{$lapangan->harga}}" name="total_harga">
+                        <input type="hidden" value="{{$lapangan->id}}" name="lapangan_id">
+                        <label for="">Tanggal Sewa Lapangan</label>
+                        <input id="datepicker" width="276" name="tanggal_pesan"/>
+                        <br>
+                        @if(Auth::check())
+                            <input type="submit" class="btn btn-success" value="Beli Sekarang">
+                            <a class="btn btn-danger"
+                               href=""><span><i class="fas fa-heart">
                             </i></span></a>
-                    @else
-                        <a class="btn btn-success" href="#" onclick="login()">Beli Sekarang</a>
-                        <a class="btn btn-danger"
-                           href="#" onclick="login()"><span><i class="fas fa-heart"></i></span></a>
-                    @endif
+                        @else
+                            <input type="submit" class="btn btn-success" value="Beli Sekarang" onclick="login()">
+                            <a class="btn btn-danger"
+                               href="#" onclick="login()"><span><i class="fas fa-heart"></i></span></a>
+                        @endif
+                    </form>
                 </div>
             </div>
         </div>
@@ -52,6 +61,10 @@
 
         function habis() {
             swal("Gagal!", "Barang Sudah Habis!", "error");
-        }
+        };
+
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
     </script>
 @endpush

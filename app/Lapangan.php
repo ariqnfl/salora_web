@@ -16,9 +16,15 @@ class Lapangan extends Model
         return $this->belongsTo('App\Kategori','kategori_id','id');
     }
 
+
     public function jenis()
     {
         return $this->belongsTo('App\Jenis','jenis_id','id');
+    }
+
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class);
     }
 
     protected $fillable = [

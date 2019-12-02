@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Lapangan;
+use App\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -11,9 +14,14 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $orders = Order::paginate(5);
+        $keyword = $request->get('id');
+        if ($keyword) {
+            $orders = Order::where("id", "LIKE", "%$keyword%")->paginate(5);
+        }
+        return view('order.index', compact('orders'));
     }
 
     /**
@@ -23,7 +31,7 @@ class OrderController extends Controller
      */
     public function create()
     {
-        //
+        return view('detail');
     }
 
     /**
@@ -34,7 +42,14 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $datas = $request->all();
+        $datas['user_id'] = Auth::user()->id;
+        $datas['status'] = "process";
+        $orders = Order::create($datas);
+        $orders->lapangan()->attach($request['lapangan_id']);
+        return redirect(route('pembayaran'));
+
     }
 
     /**

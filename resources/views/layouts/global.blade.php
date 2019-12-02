@@ -77,7 +77,7 @@
                     <li><a href="{{route('users.index')}}"><span class="oi oi-people"></span> User</a></li>
                 @endif
                 <li><a href="{{route('lapangans.index')}}"><span class="oi oi-document"></span> Lapangan</a></li>
-                <li><a href="{{route('users.index')}}"><span class="oi oi-cart"></span> Order</a></li>
+                <li><a href="{{route('order.index')}}"><span class="oi oi-cart"></span> Order</a></li>
 
                 <div class="d-block d-md-none">
                     <div class="dropdown-divider"></div>

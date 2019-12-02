@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="701c150c-7824-47ba-ba92-ccb71dccbe6b" name="Default Changelist" comment="" />
+    <list default="true" id="701c150c-7824-47ba-ba92-ccb71dccbe6b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/lap/alfa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/lap/ariq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/lap/bni.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/lap/ferry.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/lap/gopay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/lap/haidar.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/lap/kesya.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/lap/ocha.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/aboutus.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/news/filter_by.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/news/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/order/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/sukses.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Lapangan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Lapangan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_02_120509_create_order_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_02_120509_create_order_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_02_120526_create_order_lapangan_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/global.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/global.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +160,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/image/lap" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -145,14 +171,15 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Arnfl\PhpstormProjects\salora\app\Http\Controllers" />
       <recent name="C:\Users\Arnfl\PhpstormProjects\salora\app\Http\Controllers\Auth" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Arnfl\PhpstormProjects\salora\public\image\lap" />
+      <recent name="C:\Users\Arnfl\PhpstormProjects\salora\resources\views" />
+      <recent name="C:\Users\Arnfl\PhpstormProjects\salora\app\Http" />
       <recent name="C:\Users\Arnfl\PhpstormProjects\salora\public" />
       <recent name="C:\Users\Arnfl\PhpstormProjects\salora\public\image" />
-      <recent name="C:\Users\Arnfl\PhpstormProjects\salora\resources\views" />
-      <recent name="C:\Users\Arnfl\PhpstormProjects\salora\public\js" />
-      <recent name="C:\Users\Arnfl\PhpstormProjects\salora\public\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -195,7 +222,7 @@
       <workItem from="1574157580577" duration="24691000" />
       <workItem from="1574758432660" duration="17536000" />
       <workItem from="1574846423279" duration="3572000" />
-      <workItem from="1575271358061" duration="17095000" />
+      <workItem from="1575271358061" duration="31538000" />
     </task>
     <task id="LOCAL-00001" summary="nambahin readme">
       <created>1574175153362</created>
@@ -253,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575291530645</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="favorite you're my favorite uWu">
+      <created>1575291838864</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575291838864</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +313,7 @@
     <MESSAGE value="apakah kau melihat matahari senja?" />
     <MESSAGE value="apakah kau melihat matahari oWO?" />
     <MESSAGE value="favorite you're my favorite" />
-    <option name="LAST_COMMIT_MESSAGE" value="favorite you're my favorite" />
+    <MESSAGE value="favorite you're my favorite uWu" />
+    <option name="LAST_COMMIT_MESSAGE" value="favorite you're my favorite uWu" />
   </component>
 </project>

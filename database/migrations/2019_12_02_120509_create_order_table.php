@@ -15,9 +15,11 @@ class CreateOrderTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('user_id');
             $table->integer('total_harga');
             $table->string('bukti')->nullable();
+            $table->string('waktu_pesan');
+            $table->string('tanggal_pesan');
             $table->enum('status',['cancel','process','success']);
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
