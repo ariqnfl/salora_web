@@ -195,7 +195,7 @@
       <workItem from="1574157580577" duration="24691000" />
       <workItem from="1574758432660" duration="17536000" />
       <workItem from="1574846423279" duration="3572000" />
-      <workItem from="1575271358061" duration="16833000" />
+      <workItem from="1575271358061" duration="17095000" />
     </task>
     <task id="LOCAL-00001" summary="nambahin readme">
       <created>1574175153362</created>
@@ -246,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575291402301</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="favorite you're my favorite">
+      <created>1575291530645</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1575291530645</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
