@@ -53,7 +53,7 @@
             </button>
         @endif
         <div class="dropdown-menu dropdown-menu-right" id="navbar-dropdown">
-            <a href="#" class="dropdown-item">Home</a>
+            <a href="/" class="dropdown-item">Home</a>
             <div class="dropdown-divider"></div>
             <li>
                 <form action="{{route("logout")}}" method="POST">

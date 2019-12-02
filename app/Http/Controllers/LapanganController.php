@@ -29,6 +29,18 @@ class LapanganController extends Controller
         return view('lapangan.index', ['lapangans' => $lapangans]);
     }
 
+    public function nampilinGambar()
+    {
+        $lapangan = Lapangan::take(8)->get();
+        return view('index', compact('lapangan'));
+    }
+
+    public function showGambar($id)
+    {
+        $lapangan = Lapangan::findOrFail($id);
+        return view('detail', compact('lapangan'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
