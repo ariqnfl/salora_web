@@ -16,33 +16,15 @@ class NewsController extends Controller
 
     public function index(){
 
-    	$endpoint = "https://newsapi.org/v2/top-headlines?country=id&apiKey=b479ed952ff841d1be9c6c39db71cd30";
-		$client = new Client();
-		$response = $client->get($endpoint);
-		$statusCode = $response->getStatusCode();
-		$content = json_decode($response->getBody()->getContents());
+        $api_key = '966807fff7e243bd921c605c991bb5b4';
+        $client = new Client();
 
-		$articles = $content->articles;
-		//dd($articles);
-		return view('news/index', compact('articles'));
+        $response = $client->request('GET','https://newsapi.org/v2/top-headlines?country=id&category=sports&apiKey='.$api_key);
+        $responseBody = $response->getBody()->getContents();
+
+        $api_response = json_decode($responseBody,true);
+        return view('news.index',compact('api_response'));
     }
 
-    public function filterBy(Request $request){
 
-    	$filterBy = $request->author;
-    	if(!$filterBy){
-    		return redirect('/');
-    	}
-    	
-    	$endpoint = "https://newsapi.org/v2/top-headlines?country=id".$filterBy."&apiKey=b479ed952ff841d1be9c6c39db71cd30";
-		$client = new Client();
-		$response = $client->get($endpoint);
-		$statusCode = $response->getStatusCode();
-		$content = json_decode($response->getBody()->getContents());
-
-		$articles = $content->articles;
-		//dd($articles);
-		return view('news/filter_by', compact('articles', 'filterBy'));
-
-    }
 }

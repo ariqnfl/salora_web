@@ -29,6 +29,7 @@ Route::resource('favorite','FavoriteController',['except' => ['create','edit','s
 Route::get('/panel', 'PanelController@index')->name('panel');
 Route::get('/lapangan', 'LapanganController@filterData')->name('lapangan');
 Auth::routes();
+Route::get('/search','LapanganController@searchResults')->name('hasil');
 Route::resource("users","UserController");
 Route::resource("lapangans","LapanganController");
 Route::resource('order','OrderController');

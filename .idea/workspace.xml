@@ -1,35 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="701c150c-7824-47ba-ba92-ccb71dccbe6b" name="Default Changelist" comment="you're the one">
-      <change afterPath="$PROJECT_DIR$/app/Transaksi.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/basket.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/futsal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/sepakbola.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/image/tennis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/favorite.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/lapangan.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/laporan/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/laporan/partials/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/laporan/printlaporan.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/order-detail.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/order-upload.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/order/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/salora.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/salora.iml" afterDir="false" />
+    <list default="true" id="701c150c-7824-47ba-ba92-ccb71dccbe6b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LapanganController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LapanganController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Lapangan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Lapangan.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_02_120526_create_order_lapangan_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_02_141846_create_order_lapangan_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/news/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/order/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/order/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -243,7 +222,7 @@
       <workItem from="1574758432660" duration="17536000" />
       <workItem from="1574846423279" duration="3572000" />
       <workItem from="1575271358061" duration="31538000" />
-      <workItem from="1575314486018" duration="18374000" />
+      <workItem from="1575314486018" duration="21593000" />
     </task>
     <task id="LOCAL-00001" summary="nambahin readme">
       <created>1574175153362</created>
@@ -315,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575314620210</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="finally u're the one? lmao">
+      <created>1575345044466</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1575345044466</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,6 +329,7 @@
     <MESSAGE value="favorite you're my favorite" />
     <MESSAGE value="favorite you're my favorite uWu" />
     <MESSAGE value="you're the one" />
-    <option name="LAST_COMMIT_MESSAGE" value="you're the one" />
+    <MESSAGE value="finally u're the one? lmao" />
+    <option name="LAST_COMMIT_MESSAGE" value="finally u're the one? lmao" />
   </component>
 </project>

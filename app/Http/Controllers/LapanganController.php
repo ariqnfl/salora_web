@@ -49,13 +49,13 @@ class LapanganController extends Controller
             })->get();
             $jenis = Jenis::take(6)->get();
             $kategoris = Kategori::all();
-        }elseif (request()->kategori){
+        } elseif (request()->kategori) {
             $lapangan = Lapangan::with('kategori')->whereHas('kategori', function ($querry) {
                 $querry->where('kategori_id', request()->kategori);
             })->get();
             $kategoris = Kategori::all();
             $jenis = Jenis::take(6)->get();
-        }else{
+        } else {
             $jenis = Jenis::take(6)->get();
             $lapangan = Lapangan::all();
             $kategoris = Kategori::all();
@@ -136,6 +136,18 @@ class LapanganController extends Controller
         $lapangan->update($data);
         $lapangan->waktus()->sync($request->get('waktus'));
         return redirect()->back()->with('status', 'Lapangan Updated');
+    }
+
+    public function searchResults(Request $request)
+    {
+        $lapangan = Lapangan::paginate(5);
+        $jenis = Jenis::take(6)->get();
+        $kategoris = Kategori::take(6)->get();
+        $keyword = $request->get('name');
+        if ($keyword){
+            $lapangan = Lapangan::where("nama_lapangan","LIKE","%$keyword%")->paginate(4);
+        }
+        return view('lapangan',compact('lapangan','jenis','kategoris'));
     }
 
     /**

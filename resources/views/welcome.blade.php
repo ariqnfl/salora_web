@@ -70,11 +70,11 @@
         </div>
         <!--Search-->
         <div class="d-flex">
-            <form class="input-group" action="">
+            <form class="input-group" action="{{route('hasil')}}">
                 <span class="input-group-prepend">
                 </span>
                 <input class="form-control" value="{{Request::get('name')}}" type="text" name="name"
-                       placeholder="Search on Salora ..">
+                       placeholder="Cari di Salora ...">
                 <button class="btn btn-success" type="submit">Cari</button>
             </form>
             {{--<form class="input-group" action="{{route('hasil')}}">--}}
@@ -90,9 +90,9 @@
                 @guest
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Masuk &nbsp|
+                            <a class="nav-link text-success" href="#" data-toggle="modal" data-target="#loginModal"><strong>Masuk &nbsp|
                                 &nbsp
-                                Daftar</a>
+                                    Daftar</strong></a>
                         </li>
 
 
@@ -170,7 +170,7 @@
 
                             </div>
                             <div class="btn-group-vertical w-100">
-                                <button type="submit" class="btn btn-outline-primary btn-lg w-100" name="btnLogin"
+                                <button type="submit" class="btn btn-outline-success btn-lg w-100" name="btnLogin"
                                         id="btnLogin">Login
                                 </button>
                                 <br>
@@ -181,7 +181,7 @@
                                 <a href="{{url('/auth/google')}}" class="btn btn-danger btn-sm w-100"> Masuk dengan
                                     Google <i class="fa fa-google" style="font-size:26px"></i></a>
                                 <br>
-                                <a href="#" id="btn-dont-have" class="btn btn-outline-primary btn-sm w-100">Belum
+                                <a href="#" id="btn-dont-have" class="btn btn-outline-success btn-sm w-100">Belum
                                     Punya Akun ?</a>
                                 <br>
                                 <center><h6><strong>Jadi mitra kami, daftarkan lapanganmu, dapatkan keuntunganya
@@ -354,9 +354,9 @@
             </div>
             <div class="col-md-3">
                 <h3 class="heading-footer">Learn More</h3>
-                <li class="learn-more"><a href="{{route('login')}}">Masuk</a></li>
-                <li class="learn-more"><a href="#">Syarat dan Ketentuan</a></li>
-                <li class="learn-more"><a href="#">Kebijakan Privasi</a></li>
+                <li class="learn-more"><a href="#" class="text-white">Syarat dan Ketentuan</a></li>
+                <li class="learn-more"><a href="#" class="text-white">Kebijakan Privasi</a></li>
+                <li class="learn-more"><a href="https://github.com/ariqnfl/salora_web" class="text-white" > 2019 &copy; Salora Developers</a></li>
             </div>
             <div class="col-md-3">
                 <h3 class="heading-footer">Stay Connect!</h3>

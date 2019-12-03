@@ -7,7 +7,7 @@
         <!--Shop By Categories-->
         <div class="shopby">
 
-            <h1 class="text-success text-center">Choose your Favorite Sports</h1>
+            <h1 class="text-success text-center">Temukan Tempat Olahraga Favoritmu Disini!</h1>
             <br>
             <div class="row">
                 <a class="shopbyitem col-sm-6" href="/lapangan?kategori=4">

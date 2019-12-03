@@ -23,15 +23,15 @@
             </thead> -->
 
 {{--            <tbod--}}
-              @foreach($articles as $key =>$article)
+              @foreach($api_response['articles'] as $ars)
                   <div class="card mb-3" style="max-width: 540px;">
                       <div class="row no-gutters">
                           <div class="card" style="width: 50rem;">
-                              <img src="{{$article->urlToImage}}" class="card-img-top" alt="...">
+                              <img src="{{$ars['urlToImage']}}" class="card-img-top" alt="...">
                               <div class="card-body">
-                                  <h5 class="card-title">{{ $article->title }}</h5>
-                                  <p class="card-text">{{ $article->content }}</p>
-                                  <a href="{{$article->url}}" class="btn btn-primary">Read More</a>
+                                  <h5 class="card-title">{{$ars['title']}}</h5>
+                                  <p class="card-text">{{$ars['description']}}</p>
+                                  <a href="{{$ars['url']}}" class="btn btn-success">Read More</a>
                               </div>
                           </div>
 {{--                          <div class="col-md-4">--}}
