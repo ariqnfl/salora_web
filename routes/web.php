@@ -16,15 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
-
 Route::get('/about',function (){
     return view('aboutus');
 });
 Route::get('/pembayaran',function (){
     return view('sukses');
 })->name('pembayaran');
+Route::get('/order-details','OrderController@menampilkanSemuaOrder')->name('showOrder');
 Route::get('/', 'LapanganController@nampilinGambar')->name('home');
+Route::get('/favorites','FavoriteController@buatFavorite')->name('my-fav');
+Route::resource('favorite','FavoriteController',['except' => ['create','edit','show','update']]);
 Route::get('/panel', 'PanelController@index')->name('panel');
+Route::get('/lapangan', 'LapanganController@filterData')->name('lapangan');
 Auth::routes();
 Route::resource("users","UserController");
 Route::resource("lapangans","LapanganController");
@@ -37,5 +40,9 @@ Route::get('auth/{provider}/callback','Auth\SocialiteController@handleProviderCa
 Route::get('/news', 'NewsController@index');
 
 Route::get('/{id}', 'LapanganController@showGambar')->name('gambar');
+Route::get('/{id}/upload-bukti', 'OrderController@userEdit')->name('edit-user');
+Route::put('/{id}/upload-bukti', 'OrderController@userUpdate')->name('update-user');
 
+Route::GET('/laporan', 'LaporanController@index')->name('laporan');
+Route::POST('/printlaporan', 'LaporanController@printlaporan');
 

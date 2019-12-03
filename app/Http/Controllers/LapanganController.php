@@ -41,6 +41,28 @@ class LapanganController extends Controller
         return view('detail', compact('lapangan'));
     }
 
+    public function filterData()
+    {
+        if (request()->jenis) {
+            $lapangan = Lapangan::with('jenis')->whereHas('jenis', function ($querry) {
+                $querry->where('jenis_id', "=", request()->jenis);
+            })->get();
+            $jenis = Jenis::take(6)->get();
+            $kategoris = Kategori::all();
+        }elseif (request()->kategori){
+            $lapangan = Lapangan::with('kategori')->whereHas('kategori', function ($querry) {
+                $querry->where('kategori_id', request()->kategori);
+            })->get();
+            $kategoris = Kategori::all();
+            $jenis = Jenis::take(6)->get();
+        }else{
+            $jenis = Jenis::take(6)->get();
+            $lapangan = Lapangan::all();
+            $kategoris = Kategori::all();
+        }
+        return view('lapangan', compact('jenis', 'lapangan', 'kategoris'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

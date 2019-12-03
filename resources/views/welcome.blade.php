@@ -51,11 +51,17 @@
                         <a class="nav-link text-success" href="/"><strong>HOME</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-success" href=""><strong>LAPANGAN</strong></a>
+                        <a class="nav-link text-success" href="{{route('lapangan')}}"><strong>LAPANGAN</strong></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-success" href="/news"><strong>BERITA</strong></a>
                     </li>
+                    @if (Auth::user())
+                        <li class="nav-item">
+                            <a class="nav-link text-success" href="{{route('favorite.index')}}"><strong>FAVORITE </strong><span><i
+                                        class="fas fa-heart"></i></span></a>
+                        </li>
+                    @endif
                     <li class="nav-item">
                         <a class="nav-link text-success" href="/about"><strong>ABOUT US</strong></a>
                     </li>
@@ -106,7 +112,7 @@
                                 @elseif (Auth::user()->role == "mitra")
                                     <a class="dropdown-item" href="{{route('panel')}}">Mitra Panel</a>
                                 @endif
-                                <a href="" class="dropdown-item">Order Details</a>
+                                <a href="{{route('showOrder')}}" class="dropdown-item">Order Details</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
@@ -117,6 +123,7 @@
                                     @csrf
                                 </form>
                             </div>
+                        </li>
                     </ul>
                 @endguest
             </nav>

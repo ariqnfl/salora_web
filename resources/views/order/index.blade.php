@@ -70,8 +70,8 @@
                                     @endif
                                 </td>
                                 <td>
-{{--                                    <a href="{{route('order.edit',['id'=> $order->id])}}"--}}
-{{--                                       class="btn btn-info btn-sm">Edit</a>--}}
+                                    <a href="{{route('order.edit', [$order->id])}}"
+                                       class="btn btn-info btn-sm">Edit</a>
                                 </td>
                             </tr>
                         @endforeach

@@ -40,10 +40,12 @@
                         @if(Auth::check())
                             <input type="submit" class="btn btn-success" value="Beli Sekarang">
                             <a class="btn btn-danger"
-                               href=""><span><i class="fas fa-heart">
+                               href="{{route('my-fav',['id'=>Auth::user()->id,'lapangan'=>$lapangan->id])}}"><span><i
+                                        class="fas fa-heart">
                             </i></span></a>
                         @else
-                            <input type="submit" class="btn btn-success" value="Beli Sekarang" onclick="login()">
+                            <a class="btn btn-success"
+                               href="#" onclick="login()"><span>Beli Sekarang</a>
                             <a class="btn btn-danger"
                                href="#" onclick="login()"><span><i class="fas fa-heart"></i></span></a>
                         @endif
@@ -57,10 +59,6 @@
     <script>
         function login() {
             $('#loginModal').modal('show');
-        };
-
-        function habis() {
-            swal("Gagal!", "Barang Sudah Habis!", "error");
         };
 
         $('#datepicker').datepicker({

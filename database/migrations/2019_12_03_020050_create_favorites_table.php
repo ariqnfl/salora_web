@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOrderLapanganTable extends Migration
+class CreateFavoritesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateOrderLapanganTable extends Migration
      */
     public function up()
     {
-        Schema::create('order_lapangan', function (Blueprint $table) {
+        Schema::create('favorites', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('order_id');
+            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('lapangan_id');
-            $table->string('waktu');
             $table->timestamps();
-            $table->foreign('order_id')->references('id')->on('orders');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('lapangan_id')->references('id')->on('lapangans');
         });
     }
@@ -31,6 +30,6 @@ class CreateOrderLapanganTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('order_lapangan');
+        Schema::dropIfExists('favorites');
     }
 }

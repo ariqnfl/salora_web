@@ -2,7 +2,6 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -42,7 +41,13 @@ class User extends Authenticatable
         return $this->hasMany(SocialAccount::class);
     }
 
-    public function orders(){
+    public function orders()
+    {
         return $this->hasMany(Order::class);
+    }
+
+    public function favorite()
+    {
+        return $this->hasMany(Favorite::class);
     }
 }
